@@ -46,7 +46,10 @@ driver.findElement(By.name("phone_mobile")).sendKeys("1234567890");
 driver.findElement(By.id("alias")).sendKeys("qwe");
 driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
 driver.findElement(By.xpath("//a[@title='Log me out']")).click();
-
+List<WebElement> tab1 = driver.findElements(By.xpath("//table[@id='customers']/tbody/tr/td[1]"));
+		for (WebElement data1 : tab1) {
+			System.out.println(data1.getText());
+	}
 
 
 
